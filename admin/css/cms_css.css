@@ -1,0 +1,35 @@
+header
+{
+    background-color: darkblue;
+    color: #ffffff;
+}
+
+nav
+{
+    background: blue;
+    min-height: 500px;
+}
+
+nav ul
+{
+    list-style: none;
+}
+
+nav ul li a
+{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section
+{
+    background: #eeeeee;
+    min-height: 500px;
+}
+
+footer
+{
+    background: darkblue;
+}

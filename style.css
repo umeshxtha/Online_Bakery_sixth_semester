@@ -1,0 +1,206 @@
+:root{
+    color:#ed3c3b;
+}
+*{
+    margin: 0px;
+}
+body{
+width: 100%;
+overflow-x: hidden;
+}
+a{
+    text-decoration:none;
+    color: white !important;
+}
+.add-to-cart{
+margin-top: 8px;
+font-size: 30px;
+color: white;  
+}
+.add-to-cart:hover{
+    color: cadetblue;
+}
+.wel{
+    padding: 13px 0px;
+   
+    background-image: linear-gradient(rgb(104, 28, 28),rgb(37, 6, 6));
+    
+}
+.wel-p{
+    font-size: 35px;
+    font-family: cursive;
+    color: white;
+}
+
+.nav-col{
+    padding: 10px 0px;
+    text-align: center;
+}
+
+
+
+/* nav-bar */
+.navbar-col-heading a:hover{
+    color: bisque !important;
+}
+.nav-bar-col-main{
+    margin: 100px 44px;
+}
+.navbar-col{
+    background-image:url('images/cook.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white ;
+    border-radius: 10px;
+}
+.navbar-col-1{
+
+    background-image:url('images/mart.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+}
+.navbar-col-1:hover{
+    border:5px solid rgb(243, 216, 94);
+}
+.navbar-col-2{
+    background-image:url('images/drinks.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+}
+.navbar-col-2:hover {
+    border:5px solid rgb(243, 216, 94);
+}
+.navbar-col-3{
+    background-image:url('images/bakery.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+}
+.navbar-col-3:hover{
+    border:5px solid rgb(243, 216, 94);
+}
+.navbar-col:hover{
+    border:5px solid rgb(243, 216, 94) !important;
+}
+.navbar-col-1{
+
+    background-image:url('images/mart.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+}
+.navbar-col-1:hover{
+    border:5px solid rgb(243, 216, 94);
+}
+.navbar-col-2{
+
+    background-image:url('images/drinks.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+}
+.navbar-col-2:hover{
+    border:5px solid rgb(243, 216, 94);
+}
+.navbar-col-3{
+    background-image:url('images/bakery.jpg');
+    border: 5px solid rgb(236, 22, 22);
+    height: 200px;
+    color: white;
+    border-radius: 10px;
+}
+.navbar-col-3:hover{
+    border:5px solid rgb(243, 216, 94);
+}
+
+
+.navbar-col-heading{
+    font-size: 52px;
+    padding: 27px;
+}
+.navbar-col-heading:hover{
+    color: bisque;
+}
+/* navbar-ends */
+/* image-div*/
+.menu-item{
+width: 100%;
+
+overflow: hidden;
+}
+/*image*/
+.image-item-list{
+width: 244px;
+height: 244px;
+object-fit: cover;
+border-radius: 11px;
+}
+.add-btn{
+    border-radius: 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 25px 8px;
+    
+}
+.food-cart{
+    text-align: center;
+    margin-top: 20px;
+    background-color: beige;
+}
+.dish-inf{
+    background-color: #C8C6CC;
+}
+/*  */
+.price
+{
+    padding: 50px 0px 15px;
+}
+.price p
+{
+    color: red;
+}
+/*  */
+/* Footer */
+
+
+.footer-main{
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+ 
+}
+.footer-description ul>li{
+list-style-type:none;
+}
+.footer-description{
+    line-height: 9px;
+}
+.footer-description ul>li:hover{
+    text-decoration: underline;
+}
+.footer-icon{
+    margin: 0px 8px 0px;
+}
+.footer-icon-social{
+    /* text-align: center; */
+    padding: 18px 0px;
+}
+.social-media-icon{
+    margin: 0px 18px 0px;
+    font-size: 22px;
+}
+.social-media-icon:hover{
+    color: #916b6b;
+}
+.footer-content{
+    padding: 49px 0px;
+    /* text-align: center; */
+}

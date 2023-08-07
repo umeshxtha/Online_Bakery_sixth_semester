@@ -148,6 +148,57 @@ if (isset($_POST['order'])) {
   </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">my Order</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>S.N</th>
+                                    <th>Food</th>
+                                    <th>user id</th>
+                                    <th>menu id</th>
+                                    <th>order status</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <?php
+                                require_once 'admin/class/order.php';
+                                $place = new Order;
+
+                                $a = $place->selectSingleOrder($_SESSION['uid']);
+                                $b = $place->countOrder($_SESSION['uid']);
+
+                                for ($i = 0; $i < $b[0]['count']; $i++) {
+                                    echo "<tr>
+                                               
+                                                    <td >" . $a[$i]['id'] . "</td>
+                                                    <td >" . $a[$i]['Name'] . "</td>
+                                                    <td>" . $a[$i]['user_id'] . "</td>
+                                                    <td>" . $a[$i]['menu_id'] . "</td>
+                                                    <td>" . $a[$i]['order status'] . "</td>
+                                                    <td>" . $a[$i]['Price'] . "</td>
+                                                </tr>";
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+
+                    </div>
 </body>
 
 </html>

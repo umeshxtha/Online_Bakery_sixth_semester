@@ -90,11 +90,6 @@ if (isset($_POST['order'])) {
 <body>
    
 <?php include 'navbar.php'; ?>
-   
-
-    
-
-
 
     <!-- Food Item list start-->
 

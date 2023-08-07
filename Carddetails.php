@@ -1,3 +1,73 @@
+<?php
+session_start();
+if(isset($_GET['msg']))
+{
+  echo '<script>alert("'. $_GET['msg'] .'") </script>';
+}
+
+if (isset($_POST['register'])) {
+    require_once 'admin/class/User.php';
+    $user = new User();
+    $firstname = $_POST['firstname'];
+    if (!preg_match ("/^[a-z A-Z]*$/", $firstname) ) 
+      {  
+        header('location:index.php?msg= Firstname must be in letters'); 
+      }
+      else
+      {
+        $lastname = $_POST['lastname'];
+        if (!preg_match ("/^[a-z A-Z]*$/", $lastname) ) 
+        {  
+            header('location:index.php?msg= Lastname must be in letters'); 
+        }
+        else
+        {
+            $user->setValue($firstname, $lastname, $_POST['username'], $_POST['email'], $_POST['contact'], $_POST['password'], 1, 'user');
+            if ($user->registerUser()) {
+                echo '<script>alert("Registered successfully")</script>';
+            }
+        }
+    }
+}
+
+if (isset($_POST['login'])) {
+    require_once 'admin/class/User.php';
+    $user = new User();
+    $data = $user->login($_POST['username'], $_POST['password']);
+
+    if (count($data) > 0) {
+        $_SESSION['username'] = $data[0]['username'];
+        $_SESSION['usertype'] = $data[0]['type'];
+        $_SESSION['uid'] = $data[0]['ID'];
+    } else {
+        echo '<script>alert("Wrong Credentials")</script>';
+    }
+}
+
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header('location: index.php');
+}
+require 'admin/class/menu.php';
+$ck = new Menu();
+$data = $ck->selectCookedfood();
+$bk = new Menu();
+$dat = $bk->selectBakery();
+
+
+if (isset($_POST['order'])) {
+    require_once 'admin/class/order.php';
+    $st = 'Order Placed';
+    $order = new Order;
+    $order->setValue($_SESSION['uid'], $_POST['pid'], $st, $_POST['Price']);
+    if ($order->registerOrder()) {
+        echo '<script>alert("Order Failed")</script>';
+    } else {
+        echo '<script>alert("Order Successful")</script>';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +95,6 @@
         <h2 class="centered-text">
             Products Details
         </h2>
-
     </div>
   
 
@@ -79,14 +148,6 @@
   </div>
     <!-- footer -->
     <?php include 'footer.php'; ?>
-
-
-
-
-
-
-
-
 </body>
 
 </html>

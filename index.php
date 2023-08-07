@@ -104,48 +104,7 @@ if (isset($_POST['order'])) {
         <!-- <span>
             <h4 class="content-title">Best Item in town</h4>
         </span> -->
-        <div class="row">
-            <?php
-            foreach ($data as $dt) {
-            ?>
-
-                <div class="col-lg-3">
-                    <div class="food-cart card">
-                        <div class="menu-item">
-                           <a href="Carddetails.php">
-                           <img src="admin/media/<?php echo $dt['Image']; ?>" alt="" class="image-item-list" />
-                           </a>
-                        </div>
-                        <div class="menu-des">
-                            <h4><?php echo $dt['Name'] ?></h4>
-                            <form action="" method="post">
-                                <input type="hidden" name="pid" value="<?php echo $dt['id'] ?>">
-
-                            
-
-                        </div>
-                        <div class="price">
-
-                            <input type="number" name="Price" value="<?php echo $dt['Price'] ?>" readonly>
-                            <?php
-                            if(isset($_SESSION['username']))
-                            {
-                                echo '<button type="submit" class="add-btn" name="order">Add</button>';
-                            }
-                            else
-                            {
-                                echo ' <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Add</a>';
-                            }
-                            ?>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-
-
-
-        </div>
+     
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4"></div>
@@ -166,7 +125,7 @@ if (isset($_POST['order'])) {
                 ?>
 
                     <div class="col-lg-3">
-                        <div class="food-cart">
+                        <div class="food-cart card">
                             <div class="menu-item">
                               <a href="Carddetails.php">
                               <img src="admin/media/<?php echo $dt['Image']; ?>" alt="" class="image-item-list" />

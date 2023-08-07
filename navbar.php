@@ -46,8 +46,10 @@
                                 }
                             } else {
 
-                                echo ' <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>';
-                                echo ' <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>';
+                                echo ' <a href="#" class="btn" style="background-color:#12034d; color:white
+                                ;" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>';
+                                echo ' <a href="#" class="btn " style="background-color:#12034d; color:white
+                                ;" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>';
                             }
 
                             ?>
